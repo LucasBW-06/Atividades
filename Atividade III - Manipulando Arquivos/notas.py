@@ -68,21 +68,23 @@ def calculate_grades(data):
             else:
                 data.at[index, 'Condição'] = 'Exame'
             data.at[index,'Média'] = media
-    os.system('cls')
     return data
 
 def add_exam_grades(data):
     os.system('cls')
-    students = [row['Aluno'] for index, row in data.iterrows() if row['Condição'] == 'Exame']
-    str = '\n'.join(['Alunos de exame:'] + students + ['\nDigite o nome do aluno: '])
-    name = question(str, students, 'Nome inválido!')
-    exam = input_grade('Digite a nota: ')
-    data.loc[data['Aluno'] == name, 'Nota exame'] = exam
-    answer = question('Adicionar outro aluno? S/N\n', ['S','N'])
-    data = calculate_grades(data)
-    if answer == 'S':
-        data = add_exam_grades(data)
-    os.system('cls')
+    if 'Exame' in data['Condição'].values:
+        students = [row['Aluno'] for index, row in data.iterrows() if row['Condição'] == 'Exame']
+        str = '\n'.join(['Alunos de exame:'] + students + ['\nDigite o nome do aluno: '])
+        name = question(str, students, 'Nome inválido!')
+        exam = input_grade('Digite a nota: ')
+        data.loc[data['Aluno'] == name, 'Nota exame'] = exam
+        answer = question('Adicionar outro aluno? S/N\n', ['S','N'])
+        data = calculate_grades(data)
+        if answer == 'S':
+            data = add_exam_grades(data)
+        os.system('cls')
+    else:
+        print('Não há alunos de exame!')
     return data
 
 def modify_grades(data):
