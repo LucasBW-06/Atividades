@@ -98,7 +98,7 @@ def modify_grades(data):
         n = 3
         data.loc[data['Aluno'] == name, 'Condição'] = np.nan
     for i in range(n):
-        str = f'{data.columns[i+1]}: {data.loc[data['Aluno'] == name, data.columns[i+1]].iloc[0]}\nDigite a nota substituta: '
+        str = f'{data.columns[i+1]}: {data.loc[data["Aluno"] == name, data.columns[i+1]].iloc[0]}\nDigite a nota substituta: '
         grade = input_grade(str)
         data.loc[data['Aluno'] == name, data.columns[i+1]] = grade
 
