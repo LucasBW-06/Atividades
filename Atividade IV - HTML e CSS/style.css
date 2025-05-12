@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cabecalho {
+    background-color: rgb(0, 0, 30);
+    padding-left: 10px;
+    gap: 10px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    position: fixed;
+}
+
+.layout {
+    display: grid;
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 15%;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 100px;
+}
+
+.caixa {
+    background-color: gray;
+    color: black;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    min-height: 50px;
+}
+
+#foto-ca {
+    width: 40px;
+    height: 40px;
+    border-radius: 80%;
+    object-fit: cover;
+}
