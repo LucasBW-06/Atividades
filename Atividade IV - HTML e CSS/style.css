@@ -1,9 +1,4 @@
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.cabecalho {
+header {
     background-color: rgb(0, 0, 30);
     padding-left: 10px;
     gap: 10px;
@@ -15,28 +10,71 @@ body {
     position: fixed;
 }
 
-.layout {
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+footer {
+    background-color: rgb(0, 0, 30);
+    height: 30px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+.layout-1c {
+    display: grid;
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 15%;
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+.layout-2c {
     display: grid;
     gap: 20px;
     padding: 40px;
     max-width: 1200px;
     margin: 0 15%;
     grid-template-columns: repeat(2, 1fr);
-    padding-top: 100px;
+    padding-top: 0;
 }
 
 .caixa {
-    background-color: gray;
+    background-color: rgba(128, 128, 128, 0.438);
     color: black;
     align-items: center;
     padding: 10px;
+    gap: 10px;
     border-radius: 8px;
     min-height: 50px;
+    display: grid;
+    border-style: solid;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    vertical-align: middle;
 }
 
 #foto-ca {
     width: 40px;
     height: 40px;
     border-radius: 80%;
+    object-fit: cover;
+}
+
+#foto-34 {
+    border-radius: 8px;
+    width: 150px;
+    height: 200px;
     object-fit: cover;
 }
