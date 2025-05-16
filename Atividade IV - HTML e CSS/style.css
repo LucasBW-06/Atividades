@@ -18,12 +18,13 @@ body {
 
 footer {
     background-color: rgb(0, 0, 30);
-    height: 30px;
-    width: 100%;
+    height: auto;
+    width: auto;
     align-items: center;
     text-align: center;
     color: white;
     margin: 0;
+    padding: 1px;   
 }
 
 .layout-1c {
